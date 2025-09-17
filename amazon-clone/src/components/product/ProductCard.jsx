@@ -1,6 +1,6 @@
 import React from "react";
 import Rating from "@mui/material/Rating";
-import CurrencyFormat from "../components/CurrencyFormat/CurrencyFormat";
+import CurrencyFormat from "../CurrencyFormat/CurrencyFormat";
 import classes from "./Product.module.css";
 
 function ProductCard({ product }) {
