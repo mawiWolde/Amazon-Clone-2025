@@ -1,7 +1,8 @@
 import React from "react";
+import LayOut from "../../components/LayOut/LayOut";
 
 function Results() {
-  return <div>Results</div>;
+  return <LayOut>Results</LayOut>;
 }
 
 export default Results;
