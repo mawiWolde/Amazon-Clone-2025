@@ -1,14 +1,14 @@
 import { useState } from "react";
 import "./App.css";
-import Home from "./pages/home/Home.jsx";
 import Routing from "./Router.jsx";
+import Landing from "./pages/Landing/Landing";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <Routing>
-      <Home />
+      <Landing />
     </Routing>
   );
 }
