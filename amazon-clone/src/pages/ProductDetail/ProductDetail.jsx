@@ -22,13 +22,18 @@ function ProductDetail() {
         console.log(err);
         setIsLoading(false);
       });
-  }, [productId]);
+  }, []);
   return (
     <LayOut>
       {isLoading ? (
         <Loader />
       ) : (
-        <ProductCard product={product} flex={true} renderDesc={true} />
+        <ProductCard
+          product={product}
+          flex={true}
+          renderDesc={true}
+          renderAdd={true}
+        />
       )}
     </LayOut>
   );
