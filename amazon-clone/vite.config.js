@@ -6,11 +6,9 @@ import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
+const base = process.env.DEPLOY_TARGET === "gh" ? "/Amazon-Clone-2025/" : "/";
 export default defineConfig({
-  base: "/Amazon-Clone-2025",
+  base,
   plugins: [react()],
-  resolve: {
-    alias: { "@": path.resolve(__dirname, "src") }
-  }
+  resolve: { alias: { "@": path.resolve(__dirname, "src") } }
 });
