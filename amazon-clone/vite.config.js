@@ -11,8 +11,6 @@ export default defineConfig({
   base: "/Amazon-Clone-2025/",
   plugins: [react()],
   resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "src")
-    }
+    alias: { "@": path.resolve(__dirname, "src") }
   }
 });
