@@ -6,10 +6,9 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const base = process.env.DEPLOY_TARGET === "gh" ? "/Amazon-Clone-2025" : "/";
-
+// const base = process.env.DEPLOY_TARGET === "gh" ? "/Amazon-Clone-2025" : "/";
 export default defineConfig({
-  base,
+  base: "/", // Netlify serves from domain root
   plugins: [react()],
   resolve: { alias: { "@": path.resolve(__dirname, "src") } }
 });
