@@ -45,6 +45,8 @@ export const reducer = (state, action) => {
         ...state,
         basket: newBasket
       };
+    case Type.CLEAR:
+      return { ...state, basket: [] };
 
     default:
       return state;

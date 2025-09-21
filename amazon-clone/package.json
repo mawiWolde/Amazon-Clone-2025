@@ -1,13 +1,13 @@
 {
   "name": "amazon-clone",
   "private": true,
-  "homepage": "https://mawiwolde.github.io/Amazon-Clone-2025",
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
-    "build:netlify": "vite build",
-    "build:gh": "cross-env DEPLOY_TARGET=gh vite build",
+    "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build:gh",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
@@ -16,6 +16,7 @@
     "@mui/material": "^7.3.2",
     "axios": "^1.12.2",
     "dotenv": "^17.2.2",
+    "firebase": "^12.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.5.0",
@@ -28,7 +29,6 @@
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "@vitejs/plugin-react": "^5.0.0",
-    "cross-env": "^10.0.0",
     "eslint": "^9.33.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
