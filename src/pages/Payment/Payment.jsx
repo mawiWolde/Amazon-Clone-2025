@@ -78,7 +78,7 @@ function Payment() {
       setProcessing(false);
       navigate("/orders", { state: { msg: "You have placed a new order" } });
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       setCardError("An error occurred during payment. Please try again.");
       setProcessing(false);
     }
