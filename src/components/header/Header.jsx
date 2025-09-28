@@ -12,8 +12,9 @@ import { auth } from "../../Utility/firebase";
 const Header = () => {
   const [{ user, basket }, dispatch] = useContext(DataContext);
   const totalItem = basket?.reduce((amount, item) => {
-    return item.amount + amount;
+    return (item.amount || 1) + amount;
   }, 0);
+
   return (
     <>
       {" "}
@@ -45,7 +46,9 @@ const Header = () => {
                 <option value="">All</option>
               </select>
               <input type="text" />
-              <BsSearch size={35} />
+              <button type="button">
+                <BsSearch size={20} />
+              </button>
             </div>
 
             {/* other section */}
@@ -62,15 +65,18 @@ const Header = () => {
               <Link to={!user && "/auth"}>
                 <div>
                   {user ? (
-                    <>
+                    <div
+                      style={{ cursor: "pointer" }}
+                      onClick={() => auth.signOut()}
+                    >
                       <p>Hello {user?.email?.split("@")[0]}</p>
-                      <span onClick={() => auth.signOut()}>Sign Out</span>
-                    </>
+                      <span>Sign Out</span>
+                    </div>
                   ) : (
-                    <>
-                      <p>Hello , Sign In</p>
+                    <Link to="/auth">
+                      <p>Hello, Sign In</p>
                       <span>Account & Lists</span>
-                    </>
+                    </Link>
                   )}
                 </div>
               </Link>
